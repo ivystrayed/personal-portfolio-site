@@ -10,32 +10,32 @@
 /* FONTS */
 @font-face {
     font-family:blackMetal;
-    src: url(/assets/BlackMetal.ttf)
+    src: url(/assets/fonts/BlackMetal.ttf)
 }
 
 @font-face {
     font-family: ghosts;
-    src: url(/assets/Ghosts-Hairline.otf)
+    src: url(/assets/fonts/Ghosts-Hairline.otf)
 }
 
 @font-face{
+    /* font-family: gleam; */
     font-family: gleam;
-    src: url(/assets/HCGleam-Reg.otf)
+    src: url(/assets/fonts/HCGleam-Reg.otf)
 }
 
 @font-face{
     font-family: ladi;
-    src: url(/assets/Ladi-Weak.otf)
+    src: url(/assets/fonts/Ladi-Weak.otf)
 }
 /* Basic layout of everything */
  .container {
     display: grid;
-    grid-template: 200px 1fr 50px / 150px 1fr 150px;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    margin-bottom: 0px;
-    min-width: 60vw;
-    min-height: 95vh;
+    grid-template: 200px 1fr 100px/ 20vw 1fr 20vw;
+    margin: 0px;
+    padding: 0px;
+    min-width: 100vw;
+    min-height: 150vh;
     
 }
 
@@ -45,29 +45,33 @@ ul{
     list-style-type: none;
 }
 
+/* BACKGROUND */
 body {
+    /* background-image: url(assets/visuals/4.jpg); */
     background-color: black;
+    margin:0px;
+    padding:0px;
 }
 
 /* Sidebar */
+/* this is the declartionn of the sideat but idk if i rly need it... might just reformat all
+into the nav element */
 .sidebar{
     grid-column: 1 / span 1;
     grid-row: 2/ span 1;
     padding: 10%;
+}
 
- 
-
-
-
+nav{
+    position: sticky;
+    top: 15vh;
 }
 
 nav>ul{
     text-align: center;
     margin: 0px;
     padding: 0px;
-    background-color: #AD9CE7;
-    
-    
+    background-color: #AD9CE7;    
 }
 
 nav a{
@@ -85,10 +89,13 @@ nav a:hover{
 .header{
     grid-column: 1 / span 3;
     color:#44FF33;
-    background-image: url(/assets/pplstar.gif);
-    font-family: gleam;
-    font-size: 150px;
-    padding-top: 75px;
+    /* background-image: url(assets/visuals/pplstar.gif); */
+    background-image: url(assets/visuals/4.jpg);
+
+
+    font-family: ladi;
+    font-size: 8vw;
+    padding-top: 37px;
     text-align: center;
 }
 
@@ -97,40 +104,57 @@ nav a:hover{
 /* Main Body */
 .main_body{
     padding-top: 10%;
+    margin-top: 40px;
     grid-column: 2;
     background-color: aliceblue;
     opacity: 0.4;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .main_body p{
     text-align: center;
+    margin-top: 40px;
 }
 
 /* Footer */
 .footer{
-    grid-column: 1 / span 3;
-    background-image: url(/assets/raindrops.webp);
+    grid-row: 3/ span 1;
+    margin-top: 10vh;
 
+    background-image: url(/assets/visuals/raindrops.webp);
+    width: 100vw;
+    height: 100px;
+
+    padding-top: 30px;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
 
 }
 
 .footer ul{
-    display: flex;
-    justify-content: center;
-    
-
+    display:grid;
+    grid-template-columns: repeat(3, 420px);
 }
+
+/* .footer li{
+    text-align: center;
+
+} */
 
 .footer a{
     color: #AD9CE7;
     text-decoration: none;
-    padding: 20px;
+    padding-inline: 150px;
 }
 
 .footer a:hover{
     color: #44FF33;
     font-family: blackMetal;
-    padding-bottom: 50px;
+    font-size: 140%;
+
 }
 
 
