@@ -89,7 +89,7 @@ nav a{
     font-size: calc(6px + 0.5vw);
 }
 nav a:hover{
-    background-color: black;
+    background-image: url(assets/visuals/nurple-static-bright.gif);
     color: white;
 }
 
@@ -99,7 +99,7 @@ nav a:hover{
     background-image: url(assets/visuals/4.jpg); 
     
     text-align: center;
-    padding-top: 100px;
+    padding-top: 80px;
     color: white;
     font-size: 7vw;
     font-family: gleam;
